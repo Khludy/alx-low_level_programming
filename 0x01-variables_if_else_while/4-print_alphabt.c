@@ -8,7 +8,7 @@
 
 int main(void)
 {
-int (lw = 'a')
+int lw = 'a';
 
 while (lw <= 'z')
 {
@@ -25,3 +25,4 @@ lw = +1
 putchar('\n')
 return(0)
 }
+
