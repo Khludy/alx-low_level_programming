@@ -1,31 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - a program that prints all possible different combinations of two digi
- * Numbers must be separated by , followed by a space
- * Numbers should be printed in ascending order, with two digits
- * You can only use the putchar function 
+ * main - program that prints all possible different combinations of 2 digits
  * Return: 0
  */
 
 int main(void)
 {
-int n1 = 48;
-int n2;
-int com = 44;
+int c = 0;
+int f_d;
+int l_d;
 
-while (n2 <= 57)
+while (c <= 99)
 {
-putchar(n1);
-putchar(n2);
-if (n1 |= 56 || n2 |= 57)
+f_d = (c / 10 + '0');
+l_d = (c % 10 + '0');
+if (f_d < l_d)
 {
-putchar(com);
-putchar(32);
+putchar(f_d);
+putchar(l_d);
+if (c != 89)
+{
+putchar(',');
+putchar(' ');
 }
-n2 += 1;
 }
-n1 += 1;
+c++;
 }
 putchar('\n');
 return (0);
