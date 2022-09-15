@@ -2,7 +2,7 @@
 
 /**
  * main - print the first 98 fibonacci numbers
- * Return: return 0 
+ * Return: return 0
  */
 
 int main(void)
@@ -30,8 +30,8 @@ j = j / 1000;
 while (count <= 98)
 {
 carry = (m + n) / 1000;
-p = (m + n) - carry * 1000;
-k = (i + j) + carry;
+p = (m + n) -carry * 1000;
+k = (i + j) +carry;
 m = n;
 n = p;
 i = j;
