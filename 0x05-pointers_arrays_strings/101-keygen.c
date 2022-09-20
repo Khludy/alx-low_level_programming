@@ -1,21 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "main.h"
 
 /**
- * _strcpy - Copy paste string
- * @dest: destination
- * @src: source
- * Return: destination
+ * main - entry point
+ * Return: generated password
  */
 
-char *_strcpy(char *dest, char *src)
+int main(void)
 {
-int inc = 0;
+char c;
+int x;
 
-while (*(src + inc) != '\0')
+srand(time(0));
+
+while (x <= 2645)
 {
-*(dest + inc) = *(src + inc);
-inc++;
+c = rand() % 128;
+x += c;
+putchar(c);
 }
-*(dest + inc) = '\0';
-return (dest);
+putchar(2772 - x);
+
+return (0);
 }
