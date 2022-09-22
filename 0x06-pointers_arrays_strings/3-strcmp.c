@@ -24,7 +24,7 @@ diff = s2[i];
 break;
 }
 else if (s2[i] == '\0')
-}
+{
 diff = s1[i];
 break;
 }
@@ -35,7 +35,7 @@ break;
 }
 else
 i++;
-}
 
+}
 return (diff);
 }
