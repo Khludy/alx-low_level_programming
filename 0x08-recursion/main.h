@@ -1,3 +1,4 @@
+#ifndef MAIN_H
 #define MAIN_H
 
 #include <stdio.h>
@@ -12,8 +13,7 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int _sqrt(int n, int x);
 int is_prime(int n, int start);
-void check(char *s, int start, int end, int *flag);
-int is_palindrome(char *s);
+void check(char *s, int start, int end, int *flag)
 int wildcmp(char *s1, char *s2);
 
 #endif /*MAIN_H*/
