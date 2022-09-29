@@ -1,7 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
-
 #include <stdio.h>
+
+/**
+ * main.h
+ * describes all the prototypes
+ */
 
 int _putchar (char c);
 void _puts_recursion(char *s);
@@ -15,5 +19,6 @@ int _sqrt(int n, int x);
 int is_prime(int n, int start);
 int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
+void check (char *s1, char *s2);
 
 #endif /*MAIN_H*/
