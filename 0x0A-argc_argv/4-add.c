@@ -11,7 +11,6 @@
  * @argv: argument vector
  * Return: 0 on success, 1 on failure
  */
-
 int checker(int argc, int i, unsigned int j, char *argv[])
 {
 
