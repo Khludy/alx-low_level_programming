@@ -17,7 +17,7 @@ if (argc == 3)
 {
 res1 = atoi(argv[1]);
 res2 = atoi(argv[2]);
-printf("%d\n", res1 * res2);
+printf("%d\n", res1 *res2);
 return (0);
 }
 else
