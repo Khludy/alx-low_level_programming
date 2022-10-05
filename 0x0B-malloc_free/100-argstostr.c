@@ -1,40 +1,57 @@
-#include <stdlib.h>
-
-#include "holberton.h"
+#include "main.h"
 
 /**
- * argstostr - concatenates all arguments of program.
- * @ac: argument count
- * @av: pointer to argument vectors
- * Return: pointer to new buffer with all arguments as 1 string.
+ * len - returns length of str
+ * @str: string counted
+ * Return: returns the length
+ */
+
+int len(char *str)
+{
+int len = 0;
+
+if (str != NULL)
+{
+while (str[len])
+len++;
+}
+return (len);
+}
+
+/**
+ * argstostr - a function that concatenates all the arguments of your program
+ * @ac: count of args passed to the function
+ * @av:array of arguments
+ * Return: pointer to the new string
  */
 
 char *argstostr(int ac, char **av)
 {
-int i, j, len, bufferlen;
-char *p;
+char *new_string = NULL;
+int k = 0, i = ac, j, sum = 0, temp = 0;
 
-if (ac == 0)
+if (ac == 0 || av == NULL)
 return (NULL);
 
-if (av == NULL)
-return (NULL);
-i = j = len = bufferlen = 0;
-for (i = 0; av[i]; i++)
+while (ac--)
+sum += (len(av[ac]) + 1);
+new_string = (char *) malloc(sum + 1);
+
+if (new_string != NULL)
 {
-for (j = 0; av[i][j]; j++)
-len++;
-}
-p = (char *)malloc(len *sizeof(char) + ac + 1);
-if (p == NULL)
-return (NULL);
-for (i = 0; av[i]; i++)
+while (k < i)
 {
-for (j = 0; av[i][j]; j++, bufferlen++)
-p[bufferlen] = av[i][j];
-p[bufferlen] = '\n';
-bufferlen++;
+for (j = 0; av[k][j] != '\0'; j++)
+new_string[j + temp] = av[k][j];
+new_string[temp + j] = '\n';
+temp += (j + 1);
+k++;
 }
-p[bufferlen] = '\0';
-return (p);
+new_string[temp] = '\0';
+}
+else
+{
+return (NULL);
+}
+return (new_string);
 }
