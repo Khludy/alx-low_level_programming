@@ -24,7 +24,7 @@ for (s2count = 0; s2[s2count]; s2count++)
 ;
 s2count > n ? (s2count = n) : (n = s2count);
 sizeBuffer = s1count + s2count + 1;
-p = malloc(sizeBuffer * sizeof(char));
+p = malloc(sizeBuffer *sizeof(char));
 if (p == NULL)
 return (NULL);
 for (i = 0; i < sizeBuffer - 1; i++)
