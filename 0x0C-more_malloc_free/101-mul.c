@@ -53,7 +53,7 @@ return (array);
 
 /**
  * iterate_zeroes - Iterates through a string of numbers containing
- *  leading zeroes until it hits a non-zero number.
+ * leading zeroes until it hits a non-zero number.
  * @str: The string of numbers to be iterate through.
  * Return: A pointer to the next non-zero element.
  */
@@ -63,7 +63,6 @@ char *iterate_zeroes(char *str)
 
 while (*str && *str == '0')
 str++;
-
 return (str);
 }
 
@@ -71,7 +70,7 @@ return (str);
  * get_digit - Converts a digit character to a corresponding int.
  * @c: The character to be converted.
  * Description: If c is a non-digit, the function
- *  exits with a status of 98.
+ * exits with a status of 98.
  * Return: The converted int.
  */
 
@@ -118,7 +117,6 @@ while (zeroes--)
 *prod = '0';
 prod--;
 }
-
 for (; mult_len >= 0; mult_len--, mult--, prod--)
 {
 if (*mult < '0' || *mult > '9')
@@ -140,8 +138,8 @@ if (tens)
 /**
  * add_nums - Adds the numbers stored in two strings.
  * @final_prod: The buffer storing the running final product.
- *  @next_prod: The next product to be added.
- *  @next_len: The length of next_prod.
+ * @next_prod: The next product to be added.
+ * @next_len: The length of next_prod.
  */
 
 void add_nums(char *final_prod, char *next_prod, int next_len)
